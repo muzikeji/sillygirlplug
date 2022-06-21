@@ -26,7 +26,7 @@ sendText("此平台无账号。")
                  this.pmkey = "暂无key"
      }
     var database = request({ // 内置http请求函数
-        url: "http://muvip.cn/svip/xin/api.php?apikey="+ mkey + "&user="+bucketGet("qq","masters")+"&type=cx&qq=" + userID,
+        url: "http://muvip.cn/vip/api.php?type=cx&qq=" + userID,
         //请求链接
         "method": "get",
         //请求方法
