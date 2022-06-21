@@ -1,8 +1,8 @@
 # plug-in
 一个傻妞机器人用户系统插件库，由于API具有时效性，若有失效请留言。<br>
-第一步搭建傻妞<br>
+<h2>第一步搭建傻妞<br></h2>
 《傻妞机器人新版安装教程》https://blog.csdn.net/Dch520898/article/details/121169295?utm_source=app&app_version=5.5.0
-<br><br>第二步 安装必备环境(普通用户跳过，需要使用用户系统的的请部署环境。)<br>
+<br><br><h2>第二步 安装必备环境</h2>(普通用户跳过，需要使用用户系统的的请部署环境。)<br>
 SVIP功能使用流程：<br>
 1.群内发开通SVIP，支付开通。QQ群:323731210
 TG群：https://t.me/muzitg<br>
@@ -15,18 +15,18 @@ mkey 群内发 【开通SVIP 】支付好会发送到你邮箱！mkey请妥善�
 
 自定义插件开发API接口∶http://muvip.cn/svip/xin/api.php?apikey=你的mkey&user=你的授权QQ&type=执行类型&qq=用户QQ<br>
 执行类型可选 sc #生成用户信息  gb #修改用户信息  cx #查询用户信息   kill  #删除用户
-<br><br>第三步安装git
+<br><br><h2>第三步安装git</h2>
 安装git
 <br>
 下面3个命令挨个跑完就好了<br>
 `wget http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm`
 <br><br>`rpm -ivh epel-release-latest-7.noarch.rpm`
 <br><br>`yum install -y git`
-<br><br>第四步拉去本仓库
+<br><br><h2>第四步拉去本仓库</h2>
 <br>`cd && cd sillyGirl/develop/replies && git clone https://ghproxy.com/https://github.com/muzikeji/plug-in`
-<br><br>第五步移动插件到傻妞插件目录
+<br><br><h2>第五步移动插件到傻妞插件目录</h2>
 <br><br>`cd && cd sillyGirl/develop  && mv  replies/plug-in/* /root/sillyGirl/develop/replies`
-<br><br>第六步 重启傻妞
+<br><br><h2>第六步 重启傻妞</h2>
 <br>`cd && cd sillyGirl && ./sillyGirl  ##启动傻妞`
 
 <br>等待数据库加载完成，按下Ctrl 再按 C 退出
