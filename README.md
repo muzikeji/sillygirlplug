@@ -1,11 +1,11 @@
 # plug-in
-一个傻妞机器人插件库，由于API具有时效性，若有失效请留言。<br>
+一个正在学习js的人写的傻妞机器人插件库，由于API具有时效性，若有失效请留言。<br>QQ群:323731210
+TG群：https://t.me/muzitg
 <h2>第一步搭建傻妞<br></h2>
 《傻妞机器人新版安装教程》https://blog.csdn.net/Dch520898/article/details/121169295?utm_source=app&app_version=5.5.0
 <br><br><h2>第二步 安装必备环境</h2>(普通用户跳过，需要使用用户系统的的请部署环境。)<br>
 SVIP功能使用流程：<br>
-1.群内发开通SVIP，支付开通。QQ群:323731210
-TG群：https://t.me/muzitg<br>
+1.群内发开通SVIP，支付开通。<br>
 <br>2.在你服务器创建一个新的数据库。服务器需要安装phpMyAdmin、nginx以及任意版本PHP。
 <br>3.服务器安全组以及宝塔安全里放行3306端口，然后将数据库权限设置为所有人。
 <br>4.打开∶https://muvip.cn/svip/user/sql.html ，提交正确的数据库信息。
