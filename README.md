@@ -1,6 +1,6 @@
 # plug-in
 一个正在学习js的人写的傻妞机器人插件库，由于API具有时效性，若有失效请留言。<br>QQ群:323731210
-TG群：https://t.me/muzitg
+<br>TG群：https://t.me/muzitg
 <h2>第一步搭建傻妞<br></h2>
 《傻妞机器人新版安装教程》https://blog.csdn.net/Dch520898/article/details/121169295?utm_source=app&app_version=5.5.0
 <br><br><h2>第二步 安装必备环境</h2>(普通用户跳过，需要使用用户系统的的请部署环境。)<br>
