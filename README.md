@@ -1,8 +1,8 @@
 # plug-in
-一个傻妞机器人用户系统插件库<br>
+一个傻妞机器人用户系统插件库，由于API具有时效性，若有失效请留言。<br>
 第一步搭建傻妞<br>
 《傻妞机器人新版安装教程》https://blog.csdn.net/Dch520898/article/details/121169295?utm_source=app&app_version=5.5.0
-<br><br>第二步 安装必备环境<br>
+<br><br>第二步 安装必备环境(普通用户跳过，需要使用用户系统的的请部署环境。)<br>
 SVIP功能使用流程：<br>
 1.群内发开通SVIP，支付开通。QQ群:323731210
 TG群：https://t.me/muzitg<br>
@@ -12,6 +12,9 @@ TG群：https://t.me/muzitg<br>
 <br>5.发送【创建数据表】给我机器人。显示创建成功后，即可使用！
 <br>重点：购买时给的两个参数必须设置，请私聊设置以免你的mkey泄露导致数据被篡改。
 mkey 群内发 【开通SVIP 】支付好会发送到你邮箱！mkey请妥善保管。
+
+自定义插件开发API接口∶http://muvip.cn/svip/xin/api.php?apikey=你的mkey&user=你的授权QQ&type=执行类型&qq=用户QQ<br>
+执行类型可选 sc #生成用户信息  gb #修改用户信息  cx #查询用户信息   kill  #删除用户
 <br><br>第三步安装git
 安装git
 <br>
