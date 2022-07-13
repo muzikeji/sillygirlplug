@@ -31,7 +31,16 @@ function GetRequest(urlStr) {
 }
 
 function main() {
-    ti = sendText("正在解析请稍候……")
+    var PagerMaid = get("PagerMaid");
+     if (PagerMaid==GetUserID() && ImType() == "pgm") {
+              ti = sendText("正在解析请稍候……");
+     }else if(PagerMaid != GetUserID()){
+              ti = sendText("正在解析请稍候……");
+     }else{
+              ti = sendText("人形bot中？……");
+              RecallMessage(ti);
+		return;
+     }
     var jcode = GetContent();
     try {
         var reg = RegExp(/(http|ftp|https):\/\/[\w\-_]+(\.[\w\-_]+)+([\w\-\.,@?^=%&:/~\+#]*[\w\-\@?^=%&/~\+#])?/);
@@ -83,12 +92,12 @@ function main() {
                 var msg = "【LZ组队瓜分变量】";
                 var expo = "export jd_zdjr_activityId=" + activateId;
             } else {
-                var reg = RegExp(/https:\/\/cjhydz-isv.isvjcloud.com\/microDz\/invite\/activity\/wx\/view\/index\/8882761/);
+                var reg = RegExp(/https:\/\/cjhydz-isv.isvjcloud.com\/microDz\/invite\/activity\/wx\/view\/index/);
                 if (reg.exec(urlStr)) {
                     var msg = "【微定制瓜分变量】";
                     var expo = "export jd_zdjr_activityId=" + activateId;
                 } else {
-                    var reg = RegExp(/https:\/\/lzkjdz-isv.isvjcloud.com\/wxShareActivity\/activity\/6432842/);
+                    var reg = RegExp(/https:\/\/lzkjdz-isv.isvjcloud.com\/wxShareActivity\/activity\//);
                     if (reg.exec(urlStr)) {
                         var msg = "【LZ分享有礼变量】";
                         var expo = "export jd_fxyl_activityId=" + activateId;
@@ -96,17 +105,17 @@ function main() {
                         var reg = RegExp(/https:\/\/lzkj-isv.isvjd.com\/wxCollectionActivity\/activity2/);
                         if (reg.exec(urlStr)) {
                             var msg = "【M加购任务变量】";
-                            var expo = "export M_WX_ADD_CART_URL=" + urlStr;
+                            var expo = "export M_WX_ADD_CART_URL=\"" + urlStr +'"';
                         } else {
-                            var reg = RegExp(/https:\/\/cjhy-isv.isvjcloud.com\/wxDrawActivity\/activity\/867591/);
+                            var reg = RegExp(/https:\/\/cjhy-isv.isvjcloud.com\/wxDrawActivity\/activity\//);
                             if (reg.exec(urlStr)) {
                                 var msg = "【M转盘抽奖变量】";
-                                var expo = "export M_WX_LUCK_DRAW_URL=" + urlStr;
+                                var expo = "export M_WX_LUCK_DRAW_URL=\"" + urlStr +'"';
                             } else {
                                 var reg = RegExp(/cjwx\/common\/entry.html/);
                                 if (reg.exec(urlStr)) {
                                     var msg = "【M转盘抽奖变量】";
-                                    var expo = "export M_WX_LUCK_DRAW_URL=" + urlStr;
+                                    var expo = "export M_WX_LUCK_DRAW_URL=\""+ urlStr +'"';
                                 } else {
                                     var reg = RegExp(/https:\/\/lzkj-isv.isvjcloud.com\/wxgame\/activity/);
                                     if (reg.exec(urlStr)) {
@@ -127,7 +136,7 @@ function main() {
                                                 if (reg.exec(urlStr)) {
                                                     var msg = "【大牌联合开卡变量】";
                                                     var expo = "export DPLHTY=" + activateId;
-                                                } else {
+                                            } else {
                                                     var reg = RegExp(/https:\/\/lzkjdz-isv.isvjcloud.com\/wxCartKoi\/cartkoi/);
                                                     if (reg.exec(urlStr)) {
                                                         var msg = "【购物车鲤鱼变量】";
@@ -196,18 +205,18 @@ function main() {
         }
         if (ImType() == "pgm") {
             id = sendText(image(Img) + "**活动名称：" + title + "**\n**活动入口：**[点击进入](" + urlStr + ")\n**分享地址：**[长按复制](" + urlStr + ")\n**分享来自：" + Name + "**\n**洞察变量：" + msg + "**\n" + expo + "\n**" + qlset + "**\n**更多好物推荐：[去抢购](https://u.jd.com/cL58yXa)**");
-            RecallMessage(sendText(expo))
             sleep(30000)
             RecallMessage(GetMessageID());
             RecallMessage(id);
             sendText("[" + title + "](" + urlStr + ")")
-
-        } else if (GetUserID() == "1748763623") {} else {
+            RecallMessage(sendText(expo))
+        } else if (GetUserID()==PagerMaid) {} else {
             id = sendText(image(Img) + "\n活动名称：" + title + "\n活动入口：" + urlStr + "\n分享来自：" + Name + "\n洞察变量：" + msg + "\n" + expo + "\n" + qlset + "\n更多好物推荐：https://u.jd.com/cL58yXa");
             sleep(30000)
             RecallMessage(GetMessageID());
             RecallMessage(id);
             sendText(title + "：" + urlStr)
+            RecallMessage(sendText(expo))
         }
     } catch (e) {
         id = sendText("疑似接口凉凉了，无法响应！！！");
