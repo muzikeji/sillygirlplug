@@ -132,7 +132,7 @@ function check() {
 			sleep(20000); // 20秒后检测下一个
 		}
 	}
-	if (imType == "fake") {
+	if (ImType() == "fake") {
 		notifyMasters("已经给以下账号\n" + adminMsg + "用户发送账号登陆提醒");
 	} else {
 		sendText("已经给以下账号\n" + adminMsg + "用户发送账号登陆提醒");
