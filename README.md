@@ -41,3 +41,4 @@ mkey 群内发 【开通SVIP 】支付好会发送到你邮箱！mkey请妥善�
 <br>`cd && cd sillyGirl/develop/replies/plug-in && git stash && git pull `
 <br>移动到插件目录
 <br>`cd && cd sillyGirl/develop  && mv  replies/plug-in/* /root/sillyGirl/develop/replies`
+<br> 机器人体验群组 [TG 群组](https://t.me/iOSlee)
