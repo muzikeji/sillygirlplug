@@ -1,6 +1,6 @@
-// [rule: raw \[CQ:at,qq=(\d+),text=([^\[]+)]\s*/kick([\s\S]*)]
-// [rule: raw \[CQ:at,qq=(\d+),text=([^\[]+)]\s*踢([\s\S]*)]
-// [rule: raw \[CQ:at,qq=(\d+),text=([^\[]+)]\s*举报([\s\S]*)]
+// [rule: raw \[CQ:at,qq=(\d+)]\s*/kick([\s\S]*)]
+// [rule: raw \[CQ:at,qq=(\d+)]\s*踢([\s\S]*)]
+// [rule: raw \[CQ:at,qq=(\d+)]\s*举报([\s\S]*)]
 //[priority: 50]优先级
 
 function main() {
