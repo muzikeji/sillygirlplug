@@ -73,7 +73,7 @@ function main() {
     } else if (iii == 10) { //端口
         sendText("请15秒内输入新端口，输入q取消设置。")
         var old = bucketGet("sillyGirl", "port") //取值
-        var value = input(15)
+        var value = input(15000)
         var bucket = "sillyGirl"
         var newkey = "port"
     } else if (iii == 11) { //芝士开关
