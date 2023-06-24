@@ -323,7 +323,7 @@ function main() {
 							point +
 							"分 → " +
 							xpoint +
-							"分\n游戏次数：10次\n个人主页：https://muvip.cn/admin/?id=" +
+							"分\n游戏次数：10次\n个人主页：https://"+url+"/admin/" +
 							userID
 					);
 				} else if (ImType() == "wx") {
@@ -346,7 +346,7 @@ function main() {
 							point +
 							"分 → " +
 							xpoint +
-							"分\n游戏次数：10次\n个人主页：https://muvip.cn/admin/?id=" +
+							"分\n游戏次数：10次\n个人主页：https://"+url+"/admin/" +
 							userID
 					);
 				} else {
@@ -368,7 +368,7 @@ function main() {
 							point +
 							"分 → " +
 							xpoint +
-							"分\n游戏次数：10次\n个人主页：https://muvip.cn/admin/?id=" +
+							"分\n游戏次数：10次\n个人主页：https://"+url+"/admin/" +
 							userID
 					);
 				}

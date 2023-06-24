@@ -9,7 +9,7 @@ function main() {
     var why = param(3) //踢出原因
     var chufa = GetContent() //触发条件
     if (isAdmin()) { //机器人管理员操作
-        sendText("是否拉黑此用户？发送【1】拉黑  |   发送其他不拉黑！")
+        sendText("是否拉黑此用户？发送【1】拉黑  |   发送其他不拉黑！")  
         sr = input()
         if (sr == 1) { //确认拉黑
             var reject = "true"

@@ -96,7 +96,7 @@ if(reg.exec(img)){ //输入了一个链接
                 sec = input(60000)
 
 		var email = this.sec;
-		var reg = /^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]{2,4})$/;
+		var reg = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(\.[a-zA-Z]{2,})?$/;
 		if(reg.test(email)){
  //输入了一个链接
                         var database = request({ // 内置http请求函数
