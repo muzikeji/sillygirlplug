@@ -1,6 +1,6 @@
 // [rule: raw ^颜值$]
 //[priority: 350]优先级
-// [disable: false] 是否禁用
+// [disable: true] 是否禁用
 function main() {
       sendText("请发送人脸图片给我:")
       sec = input(60000)
