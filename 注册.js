@@ -120,12 +120,12 @@ function main() {
 				} else {
 					var userID = get(UIN);
 				}
-			}
+			
 		}else{
 		sendText("主动取消或输入超时，已退出");
 		return;
 		}
-	} else {
+	}else{
 		var userID = GetUserID();
 		var UIN = GetUserID();
 	}

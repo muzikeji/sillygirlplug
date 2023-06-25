@@ -7,7 +7,7 @@ function main() {
       var cont = encodeURI(sec)
        img = cont.match(/http(.*?)term/)[1]
        var reg = RegExp(/qpic.cn/);
-       if(reg.exec(img)){ 
+       if(reg.exec(img)){   
        var imgurl = "http" + img + "term=255"
     var data = request({ // 内置http请求函数
         url: "http://mika.ovooa.com/api/image/%E9%A2%9C%E5%80%BC%E9%89%B4%E5%AE%9A.php?url="+ imgurl + "&type=json",
