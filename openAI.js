@@ -4,7 +4,7 @@ var begin = ""
 var s = Sender
 const prompt = "这是一个机器人";
 const apiUrl = "https://zili.ml";
-var apikey = "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";
+var apikey = "";
 const username = GetUsername()
 if (!apikey) {
   var apikey = bucketGet("otto", "apikey")
