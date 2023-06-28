@@ -26,7 +26,7 @@ function main() {
       },
       body: {
         "model": "gpt-3.5-turbo",
-        "messages": [{ "role": "system", "content": context1 }, { "role": "user", "content": words }],
+        "messages": [{ "role": "system", "content": prompt }, { "role": "user", "content": ct }],
         "temperature": 0.7,
       }
 
