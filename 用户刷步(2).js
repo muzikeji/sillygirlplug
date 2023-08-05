@@ -10,8 +10,8 @@ function main() {
 	var username = GetUsername();
 	if (userID == "") {
 		//判定为定时任务
-		var phone = "188888888888"; //内置账号
-		var pwd = "123456"; //内置密码
+		var phone = "15888092952"; //内置账号
+		var pwd = "MUZI520898"; //内置密码
 		var min = 60000,
 			//最小步数
 			max = 90000; //最大步数
@@ -22,11 +22,11 @@ function main() {
 			url:
 				"http://api." +
 				murl +
-				"/api/shuabu/bu.php?u=" +
+				"/api/xiaomi/api.php?account=" +
 				phone +
-				"&p=" +
+				"&password=" +
 				pwd +
-				"&s=" +
+				"&steps=" +
 				steps,
 			//备用接口
 			//请求链接
@@ -35,7 +35,7 @@ function main() {
 			dataType: "json",
 			//指定json类型数据
 		});
-		var msg = database.msg;
+		var msg = database.message;
 		notifyMasters(msg); //通知管理员刷步情况
 	} else {
 		if (ImType() != "qq") {
@@ -103,49 +103,49 @@ function main() {
 							// 内置http请求函数
 							//url: "https://api.kit9.cn/api/Xiaomisteps/?xmmobile=" + phone + "&xmpsw=" + pwd + "&xmstep=" + steps,
 							url:
-								"http://api." +
-								murl +
-								"/api/shuabu/bu.php?u=" +
-								phone +
-								"&p=" +
-								pwd +
-								"&s=" +
-								steps,
+				"http://api." +
+				murl +
+				"/api/xiaomi/api.php?account=" +
+				phone +
+				"&password=" +
+				pwd +
+				"&steps=" +
+				steps,
 							//请求链接
 							method: "get",
 							//请求方法
 							dataType: "json",
 							//指定json类型数据
 						});
-						var msg = database.msg;
+						var msg = database.message;
 						sendText(msg); //通知操作者
 					} else {
 						var database = request({
 							// 内置http请求函数
 							//url: "https://api.kit9.cn/api/Xiaomisteps/?xmmobile=" + phone + "&xmpsw=" + pwd + "&xmstep=" + steps,
 							url:
-								"http://api." +
-								murl +
-								"/api/shuabu/bu.php?u=" +
-								phone +
-								"&p=" +
-								pwd +
-								"&s=" +
-								steps,
+				"http://api." +
+				murl +
+				"/api/xiaomi/api.php?account=" +
+				phone +
+				"&password=" +
+				pwd +
+				"&steps=" +
+				steps,
 							//请求链接
 							method: "get",
 							//请求方法
 							dataType: "json",
 							//指定json类型数据
 						});
-						var msg = database.msg;
+						var msg = database.message;
 						sendText(msg); //通知操作者
 					}
 				}
 			} else {
 				sendText(
 					username +
-						"，你还没有添加小米运动账号，请打开\n https://你的前端页面地址。\n添加一个账号吧！"
+						"，你还没有添加小米运动账号，请打开\n https://muvip.cn/admin/xmsb/。\n添加一个账号吧！"
 				);
 			}
 		}

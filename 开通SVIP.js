@@ -91,7 +91,7 @@ sendText("请选择支付方式~\n1 . 支付宝支付(自动授权)\n2 . QQ支�
                     var stats = data.stats
                     if (stats == 666) { //已傅錢
                         var database = request({ // 内置http请求函数
-                            url: "http://" + murl + "/svip/xin/api.php?apikey="+ mkey + "&user="+bucketGet("qq","masters")+"&type=gb&qq=" + qq + "&mkey=" + codes,
+                            url: "http://" + murl + "/svip/" + mkey + ".php?type=gb&qq=" + qq + "&mkey=" + codes,
                             //请求链接
                             "method": "get",
                             //请求方法
@@ -182,7 +182,7 @@ var content = "请加QQ群466631952<br>请对你的机器人说：<br>set otto m
                         var reg = RegExp(/已支付/);
                         if (reg.exec(statss)) {
                         var database = request({ // 内置http请求函数
-                            url: "http://" + murl + "/svip/xin/api.php?apikey="+ mkey + "&user="+bucketGet("qq","masters")+"&type=gb&qq=" + qq + "&mkey=" + codes,
+                            url: "http://" + murl + "/svip/" + mkey + ".php?type=gb&qq=" + qq + "&mkey=" + codes,
                             //请求链接
                             "method": "get",
                             //请求方法
@@ -208,7 +208,7 @@ var content = "请加QQ群466631952<br>请对你的机器人说：<br>set otto m
                     var reg = RegExp(/已支付/);
                     if (reg.exec(statss)) {
                         var database = request({ // 内置http请求函数
-                            url: "http://" + murl + "/svip/xin/api.php?apikey="+ mkey + "&user="+bucketGet("qq","masters")+"&type=gb&qq=" + qq + "&mkey=" + codes,
+                            url: "http://" + murl + "/svip/" + mkey + ".php?type=gb&qq=" + qq + "&mkey=" + codes,
                             //请求链接
                             "method": "get",
                             //请求方法
@@ -240,7 +240,7 @@ var content = "请加QQ群466631952<br>请对你的机器人说：<br>set otto m
                    RecallMessage(id)
              }else if(iii ==4) {
                   var database = request({ // 内置http请求函数
-                       url: "http://" + murl +"/svip/xin/api.php?apikey="+ mkey + "&user="+bucketGet("qq","masters")+"&type=cx&qq=" + qq,
+                       url: "http://" + murl +"/svip/" + mkey + ".php?type=cx&qq=" + qq,
                    //请求链接
                       "method": "get",
                    //请求方法
@@ -251,7 +251,7 @@ var content = "请加QQ群466631952<br>请对你的机器人说：<br>set otto m
                     if (parseInt(money) > parseInt(jine)) {
                       var zong = Number(money) - Number(jine)
                         var database = request({ // 内置http请求函数
-                            url: "http://" + murl + "/svip/xin/api.php?apikey="+ mkey + "&user="+bucketGet("qq","masters")+"&type=gb&qq=" + qq + "&mkey=" + codes + "&money=" +zong ,
+                            url: "http://" + murl + "/svip/" + mkey + ".php?type=gb&qq=" + qq + "&mkey=" + codes + "&money=" +zong ,
                             //请求链接
                             "method": "get",
                             //请求方法
