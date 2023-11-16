@@ -14,7 +14,7 @@ SVIP功能使用流程：<br>
 <br>重点：购买时给的两个参数必须设置，请私聊设置以免你的mkey泄露导致数据被篡改。
 mkey 群内发 【开通SVIP 】支付好会发送到你邮箱！mkey请妥善保管。
 
-自定义插件开发API接口∶http(s)://muvip.cn/svip/xin/api.php?apikey=你的mkey&user=你的授权QQ&type=执行类型&qq=用户QQ<br>
+自定义插件开发API接口∶http(s)://muvip.cn/svip/xin/api.php?apikey=你的mkey&user=你的授权QQ&type=执行类型&qq=用户ID<br>
 执行类型可选 sc #生成用户信息  gb #修改用户信息  cx #查询用户信息   kill  #删除用户
 <br><br><h2>第三步安装git</h2>
 安装git
