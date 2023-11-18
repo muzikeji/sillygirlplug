@@ -14,7 +14,7 @@ function main() {
 			"是否与 QQ 平台数据同步？\n 1.同步回复「y」或者「Y」\n 2.不同步回复「n」或者「N」\n 3.取消注册请回复其他内容。"
 		);
 		xz = input(30000);
-		if (xz == "n"|| xz== "N") {
+		if (xz == "n" || xz == "N") {
 			var userID = GetUserID();
 			var UIN = GetUserID();
 			set(UIN, GetUserID());
@@ -41,13 +41,13 @@ function main() {
 				sendText(username + "，你已有账号无需再次注册！");
 				return;
 			}
-		} else if (xz== "y" ||xz=="Y"){
+		} else if (xz == "y" || xz == "Y") {
 			if (ImType() != "qq") {
 				var UIN = GetUserID();
 				var userID = get(UIN);
-				if (!userID||userID==GetUserID()) {
+				if (!userID || userID == GetUserID()) {
 					sendText(
-						"初次注册需绑定QQ账号(QQ号将作为你的ID账号)，请在30s内发送你的QQ号给我。你的QQ号码是:"
+						"绑定QQ账号(QQ号将作为你的ID账号)，请在30s内发送你的QQ号给我。你的QQ号码是:"
 					);
 					QQ = input(30000);
 					var userqq = QQ.match(/[1-9][0-9]{4,10}/); //验证码
@@ -88,9 +88,9 @@ function main() {
 							url:
 								"http://" +
 								murl +
-								"/api/email/api.php?address=" +
+								"/api/em/?address=" +
 								userqq +
-								"@qq.com&name=MUZI用户系统注册验证码&certno=" +
+								"@qq.com&name=MUZI用户系统注册验证码&content=" +
 								content,
 							//请求链接
 							method: "get",
@@ -110,22 +110,22 @@ function main() {
 							var UIN = GetUserID();
 							set(UIN, userqq);
 							var userID = get(UIN);
-              }
+						} else {
 							sendText(
 								"验证失败，你重新开始注册！务必正确填写验证码。"
 							);
 							return;
 						}
 					}
-				} else {
-					var userID = get(UIN);
 				}
-			
-		}else{
-		sendText("主动取消或输入超时，已退出");
-		return;
+			} else {
+				var userID = get(UIN);
+			}
+		} else {
+			sendText("主动取消或输入超时，已退出");
+			return;
 		}
-	}else{
+	} else {
 		var userID = GetUserID();
 		var UIN = GetUserID();
 	}
