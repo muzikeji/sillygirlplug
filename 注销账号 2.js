@@ -36,7 +36,7 @@ sendText("此平台无账号。")
     var charm = database.charm
     var other = database.other
     if (zcode == 1) { //未注册
-        id = sendText(username + "，你还没有账号，你应该发送【注册】而非【注销】。")
+        id = sendText(username + "，你还没有账号，你注销个卵啊？")
     } else { // 已注册
       if (zcode == 0) { //已注册非VIP
     sendText("10秒内发送【1】确认注销  |   发送其他内容取消注销。\n⚠警告：账号一经注销所有数据不可复原，再次注册不送积分和金币，请谨慎操作。")
@@ -50,7 +50,9 @@ sendText("此平台无账号。")
                     "dataType": "json",
                     //这里接口直接返回文本，所以不需要指定json类型数据
                 })
-                sendText("用户ID：" + userID + "\n注销状态：注销成功 \n温馨提示：账号所有信息已删除，且再次注册不能恢复。")
+							var UIN = GetUserID();
+							set(UIN, UIN);
+                sendText("用户ID：" + UIN + "\n注销状态：注销成功 \n温馨提示：账号所有信息已删除，且再次注册不能恢复。")
       }else{sendText("已退出。")}
 
             } else { //已注册VIP用户
@@ -67,7 +69,9 @@ sendText("此平台无账号。")
                     "dataType": "json",
                     //这里接口直接返回文本，所以不需要指定json类型数据
                 })
-                sendText("用户ID：" + userID + "\n注销状态：注销成功 \n温馨提示：账号所有信息已删除，且再次注册不能恢复。")
+                						var UIN = GetUserID();
+                						set(UIN, UIN);
+                sendText("用户ID：" + UIN + "\n注销状态：注销成功 \n温馨提示：账号所有信息已删除，且再次注册不能恢复。")
             sleep(2000)
             sendText("[CQ:at,qq=" + param(1) + ",text=" + param(2) + "](" + param(1) + ") \n你已不再是VIP用户，10秒后你将被移除VIP群组。" )
             sleep(10000) //等待10秒后踢出，让其知道死因。
