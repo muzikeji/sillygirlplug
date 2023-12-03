@@ -13,7 +13,7 @@ function main() {
   if (param(2) != "") {
     var text = input2
   } else {
-    var text = input2
+    var text = input1
   }
   var data = request(
   {
