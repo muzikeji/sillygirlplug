@@ -8,37 +8,38 @@
 //[imType:qq] 白名单
 function main() {
 
-    var input1 = param(1)
-    var input2 = param(2)
-    if (param(2) != "") {
-var text = input2
-   } else {var text = input2
-}
+  var input1 = param(1)
+  var input2 = param(2)
+  if (param(2) != "") {
+    var text = input2
+  } else {
+    var text = input2
+  }
   var data = request(
-    {
-      url: "http://openapi.turingapi.com/openapi/api/v2",
-      method: "post",
-      headers: {
-        "Content-Type": 'application/json',
-      },
-body: JSON.stringify({
-    reqType: 0,
-    perception: {
-      inputText: {
-        text: text
-      }
+  {
+    url: "http://openapi.turingapi.com/openapi/api/v2",
+    method: "post",
+    headers: {
+      "Content-Type": 'application/json',
     },
-    userInfo: {
-      apiKey: "",//图灵apikey
-      userId: "460134"
-    }
-  })
+    body: JSON.stringify({
+      reqType: 0,
+      perception: {
+        inputText: {
+          text: text
+        }
+      },
+      userInfo: {
+        apiKey: "", //图灵apikey
+        userId: "460134"
+      }
+    })
 
-}  );
+  });
 
- 
 
-var data = JSON.parse(data)
-              sendText(data.results[0].values.text)
+
+  var data = JSON.parse(data)
+  sendText(data.results[0].values.text)
 }
 main()
