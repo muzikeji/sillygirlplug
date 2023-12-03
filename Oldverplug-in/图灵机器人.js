@@ -8,12 +8,10 @@
 //[imType:qq] 白名单
 function main() {
 
-  var input1 = param(1)
-  var input2 = param(2)
   if (param(2) != "") {
-    var text = input2
+    var text = param(2)
   } else {
-    var text = input1
+    var text = param(1)
   }
   var data = request(
   {
