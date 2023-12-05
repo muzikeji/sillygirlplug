@@ -11,7 +11,7 @@ function main() {
   if (param(2) != "") {
     var text = param(2)
   } else {
-    var text = param(1)
+    var text = GetContent()
   }
   var data = request(
   {
