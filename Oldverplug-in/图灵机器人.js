@@ -1,9 +1,9 @@
 // [rule: ?？]其他关键字
 // [rule: ?吗]其他关键字
 // [rule: 小爱?]其他关键字
-// [rule: raw \[CQ:at,qq=1975537275,text=([^\[]+) ([\s\S]*)]
-// [rule: raw \[CQ:at,qq=304625534,text=([^\[]+) ([\s\S]*)]
-// [rule: raw \[CQ:at,qq=731428866,text=([^\[]+) ([\s\S]*)]
+// [rule: raw \[CQ:at,qq=1975537275 ([\s\S]*)]
+// [rule: raw \[CQ:at,qq=304625534 ([\s\S]*)]
+// [rule: raw \[CQ:at,qq=731428866 ([\s\S]*)]
 //[disable: false]是否禁用
 //[imType:qq] 白名单
 function main() {
